@@ -1,0 +1,12 @@
+.form-group.quantity{
+    margin-top: 12px;
+}
+.submitButton{
+    margin-top: 12px;
+}
+input#symbol {
+    margin-left: 10px;
+}
+input#quantity {
+    margin-left: 5px;
+}

@@ -1,0 +1,31 @@
+<div class="stock-list">
+    <h2>Stock Portfolio</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Quantity</th>
+          <th>Current Price</th>
+          <th>Total Value</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of stocks">
+          <td>{{ stock.symbol }}</td>
+          <td>{{ stock.quantity }}</td>
+          <td>{{ stock.currentPrice | currency }}</td>
+          <td>{{ stock.totalValue | currency }}</td>
+          <td>
+            <button (click)="removeStock(stock.symbol)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="total-value">
+      <h3>Total Portfolio Value: {{ totalValuePortfolio | currency }}</h3>
+    </div>
+  </div>
+  
